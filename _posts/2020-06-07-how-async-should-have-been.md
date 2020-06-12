@@ -98,9 +98,9 @@ The last thing we need is to decide which client we want: async or sync one. Let
 
 ```python
 def fetch_resource_size(
-    client_get: Callable[[str], AbstactionType[Response]],
+    client_get: Callable[[str], AbstractionType[Response]],
     url: str,
-) -> AbstactionType[int]:
+) -> AbstractionType[int]:
     return client_get(url).map(
         lambda response: len(response.content),
     )
